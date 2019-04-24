@@ -6,4 +6,4 @@ before_install:
   - docker build -t brunozrk/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run brunozrk/docker-react npm run test -- --coverage
+  - docker run -e "CI=true" brunozrk/docker-react npm run test -- --coverage
